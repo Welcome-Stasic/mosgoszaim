@@ -923,6 +923,7 @@ main #fourth-content .container-fourth .content .items ul {
         margin-left: 25px;
         margin-right: 25px;
     }
+
     main #fourth-content .container-fourth .content .elements {
         margin-right: 0px;
         width: 364px;
@@ -1018,7 +1019,7 @@ main #f-content .container-f button {
 /* секция 7 */
 main #s-content {
     width: 100%;
-    height: 100vh;
+    height: 650px;
 
 }
 
@@ -1036,7 +1037,6 @@ main #s-content .container-s .h1-feedback {
 
 main #s-content .container-s .feedback {
     margin-top: 60px;
-    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -1044,14 +1044,15 @@ main #s-content .container-s .feedback {
 }
 
 main #s-content .container-s .elementes {
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
     width: 434px;
     height: 270px;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
     border-radius: 25px 25px 75px 25px;
 }
 
 main #s-content .container-s .elementes {
+
     display: grid;
 }
 
@@ -1107,7 +1108,35 @@ main #s-content .container-s .elementes .itemes span {
     display: flex;
 }
 
+.container-circle {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.container-circle .circle-feedback {
+    cursor: pointer;
+    margin-top: 60px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    border: 3px solid #ACACAC;
+}
+
+.container-circle .circle-feedback:first-child {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #F6C000;
+    border: none;
+}
+
 @media (max-width: 938px) {
+    main #s-content {
+        width: 100%;
+        height: 535px;
+    }
+
     main #s-content .container-s .elementes {
         width: 400px;
         height: 285px;
@@ -1115,6 +1144,9 @@ main #s-content .container-s .elementes .itemes span {
         margin-bottom: 10px;
     }
 
+    .container-circle {
+        display: none;
+    }
 
     main #s-content .container-s .elementes:nth-child(2) {
         display: none;
@@ -1128,14 +1160,99 @@ main #s-content .container-s .elementes .itemes span {
 /* секция 8 */
 main #seven-content {
     width: 100%;
-    height: 100vh;
+    height: 650px;
 }
 
-/* секция 9 */
-main #eth-content {
-    width: 100%;
-    height: 100vh;
+main #seven-content .container-seven {
+    margin-left: 15vw;
+    width: 664px;
+    margin-right: auto;
+}
+
+main #seven-content .container-seven .item span {
+    display: flex;
+    color: #464855;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+main #seven-content .container-seven .h1-title-seven {
+    color: #464855;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+main #seven-content .container-seven .item p {
+    display: flex;
+    color: #464855;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+main #seven-content .container-seven .button-under {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+main #seven-content .container-seven .button-under button {
     background-color: #FFDD2D;
+    color: #464855;
+    font-weight: 700;
+    font-size: 12px;
+    width: 250px;
+    height: 38px;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main #seven-content .container-seven .button-under button:last-child {
+    background-color: transparent;
+    color: #FFDD2D;
+    font-weight: 700;
+    font-size: 12px;
+    border: 2px solid #FFDD2D;
+}
+
+@media (max-width: 938px) {
+    main #seven-content {
+        width: 100%;
+        height: 650px;
+    }
+
+    main #seven-content .container-seven .button-under {
+        justify-content: start;
+        gap: 24px;
+
+    }
+
+    main #seven-content .container-seven .button-under button {
+        width: 170px;
+        height: 40px;
+    }
+
+    main #seven-content .container-seven .item span {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    main #seven-content .container-seven .h1-title-seven {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    main #seven-content .container-seven .item p {
+        font-weight: 300;
+        font-size: 14px;
+    }
 }
 
 /* подвал */
@@ -1143,4 +1260,57 @@ footer {
     width: 100%;
     height: 250px;
     background-color: #464855;
+}
+
+footer .container-footer {
+    margin: 0px 160px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 250px;
+}
+
+footer .container-footer .elemet {
+    justify-content: center;
+    align-content: center;
+}
+
+footer .container-footer .elemet:first-child span {
+    display: flex;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer .container-footer .elemet .h1-footer-title {
+    margin-bottom: 26px;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+
+}
+
+footer .container-footer .elemet nav ul li {
+    list-style: none;
+}
+
+footer .container-footer .elemet nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media (max-width: 938px) {
+    footer {
+        width: 100%;
+        height: 492px;
+    }
+
+    footer .container-footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
 }
